@@ -225,7 +225,115 @@ int main(){
     
     std::cout << number11 << "/" << number12 << " = " << result << std::endl;
 
+    // BOOLEANS
+    bool red_light {false};
+    bool green_light{true};
     
+    if(red_light == true){
+        std::cout << "Stop!" << std::endl;
+    }else{
+        std::cout << "Go through!" << std::endl;
+    }
+    // or
+    if(green_light){
+        std::cout << "The light is green!" << std::endl;
+    }else{
+        std::cout << "The light is NOT green!" << std::endl;
+    }
+
+    //sizeof()
+    std::cout << "sizeof(bool) : " << sizeof(bool) << std::endl;
+
+
+    //Printing out a bool
+    //1 -->> true
+    //0 -->> false
+    std::cout << std::endl;
+    std::cout << "red_light : " << red_light << std::endl;
+    std::cout << "green_light : " << green_light << std::endl;
+
+    std::cout << std::boolalpha;
+    std::cout << "red_light : " << red_light << std::endl;
+    std::cout << "green_light : " << green_light << std::endl;
+
+
+    // CHARACTERS AND TEXT
+    char character1 {'a'};
+    char character2 {'r'};
+    char character3 {'r'};
+    char character4 {'o'};
+    char character5 {'w'};
+    
+    std::cout << character1 << std::endl;
+    std::cout << character2 << std::endl;
+    std::cout << character3 << std::endl;
+    std::cout << character4 << std::endl;
+    std::cout << character5 << std::endl;
+
+    //One byte in memory : 2^8 = 256 different values (0 ~ 255)
+    std::cout << std::endl;
+    
+    char value = 65 ; // ASCII character code for 'A'
+    std::cout << "value : " << value << std::endl; // A
+    std::cout << "value(int) : " << static_cast<int>(value) << std::endl; 
+
+
+    // AUTO Variable type
+    auto var1 {12}; //int
+    auto var2 {13.0}; //double
+    auto var3 {14.0f}; //float
+    auto var4 {15.0l}; //long double
+    auto var5 {'e'}; // char
+    
+    //int modifier suffixes
+    auto var6 { 123u}; // unsigned
+    auto var7 { 123ul}; //unsigned long
+    auto var8 { 123ll}; // long long
+
+    std::cout << "var1 occupies : " << sizeof(var1) << " bytes" << std::endl;
+    std::cout << "var2 occupies : " << sizeof(var2) << " bytes" << std::endl;
+    std::cout << "var3 occupies : " << sizeof(var3) << " bytes" << std::endl;
+    std::cout << "var4 occupies : " << sizeof(var4) << " bytes" << std::endl;
+    std::cout << "var5 occupies : " << sizeof(var5) << " bytes" << std::endl;
+    std::cout << "var6 occupies : " << sizeof(var6) << " bytes" << std::endl;
+    std::cout << "var7 occupies : " << sizeof(var7) << " bytes" << std::endl;
+    std::cout << "var8 occupies : " << sizeof(var8) << " bytes" << std::endl;
+
+    //ASSIGNMENTS
+    int var1{123}; // Declare and initialize
+    std::cout << "var1 : "  << var1 << std::endl;
+    
+    var1 = 55; // Assign
+    std::cout << "var1 : "  << var1 << std::endl;
+    
+    std::cout << std::endl;
+    std::cout << "----------------" << std::endl;
+
+    double var2 {44.55}; // Declare and initialize
+    std::cout << "var2 : " << var2 << std::endl;
+    
+    var2 = 99.99; // Assign
+    std::cout << "var2 : " << var2 << std::endl;
+    
+    std::cout << std::endl;
+    std::cout << "----------------" << std::endl;
+
+    std::cout << std::endl;
+    bool state{false}; // Declare and initialize
+    std::cout << std::boolalpha;
+    std::cout << "state : " << state << std::endl;
+    
+    state = true; // Assign
+    
+    std::cout << "state : " << state << std::endl;
+
+    //Auto type deduction
+    //Careful about auto assignments
+    auto var3 {333u}; // Declare and initialize with type deduction
+    
+    var3 = -22; // Assign negative number. DANGER!
+    
+    std::cout << "var3 : " << var3 << std::endl;
 
     return 0;
 }
