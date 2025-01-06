@@ -219,7 +219,7 @@ int main(){
     
     std::cout << "Hello";
     std::cout << "World";
-    
+        
     std::cout << std::endl;
     
     std::cout << "-------------" << std::endl;
@@ -621,7 +621,7 @@ int main(){
 	
 	auto result1 = var1 + var2 ;
 	auto result2 = var3 + var4;
-    // results will automatically convert short int to int by compiler, because its min of 4 bytes required to form any operation
+    // results will automatically convert short int to int by compiler, because its min of 4 bytes required to form any mathematical operation
 	
 	std::cout << "size of result1 : " << sizeof(result1) << std::endl; // 4
 	std::cout << "size of result2 : " << sizeof(result2) << std::endl; // 4
